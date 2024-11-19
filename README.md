@@ -1,130 +1,74 @@
-# MC Technology's zmk-config for corne
+# zmk-config en español
 
-[![MC Technology](https://github.com/mctechnology17/mctechnology17/blob/main/src/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
+//////////////////////////////////////
 
 <div align="center">
 
-  [<img align="center" alt="MC Technology | YouTube" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/youtube.png" />][youtube]
-  [<img align="center" alt="MC Technology17 | Facebook" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/facebook.png" />][facebook]
-  [<img align="center" alt="MC Technology17 | Reddit" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/reddit.png" />][reddit]
+Configuración para corne valida para otros teclados split
 
 </div>
 <br>
 
 
-- [INTRO](#INTRO)
-- [QUICK START](#QUICK-START)
-- [LOCAL INSTALLATION](#LOCAL-INSTALLATION)
-- [DISPLAY](#DISPLAY)
+- [INTRODUCCIÓN](#INTRODUCCIÓN)
+- [INICIO](#INICIO)
+- [INSTALACIÓN LOCAL](#LOCAL-INSTALLATION)
+- [PANTALLA](#DISPLAY)
 - [RGB](#RGB)
 - [DONGLE](#DONGLE)
-- [USEFUL TIPS](#USEFUL-TIPS)
-- [RELATED PROJECTS](#RELATED-PROJECTS)
-- [DONGLE DESIGNS](#DONGLE-DESIGNS)
+- [CONSEJOS ÚTILES](#USEFUL-TIPS)
+- [PROYECTOS RELACIONADOS](#RELATED-PROJECTS)
+- [DISEÑOS DE DONGLES](#DONGLE-DESIGNS)
 - [ZMK STUDIO](#ZMK-STUDIO)
-- [MODULE INTEGRATION](#MODULE-INTEGRATION)
-- [INSPIRATIONS](#INSPIRATIONS)
-- [MY OTHER PROJECTS](#MY-OTHER-PROJECTS)
+- [INTEGRACIÓN DEL MÓDULO](#MODULE-INTEGRATION)
+- [CREDITOS](#INSPIRATIONS)
+- [MIS OTROS PROYECTOS](#MY-OTHER-PROJECTS)
 
 ----
-
-If you already have your corne configured with this repository and want to make
-a modification to your keymap, you can do it with the online [ZMK-STUDIO](https://zmk.studio/).
-
-If you already have your corne configured with this repository and want to make
-a modification to your keymap, you can do it with the online [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
+Si ya tienes un teclado configurado con este repositorio y quieres hacer una modificación a tu mapa de teclas, puedes hacerlo online mediante [ZMK-STUDIO](https://zmk.studio/), tambien puedes usar [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
 
 
-# INTRO
+# INTRODUCCIÓN
 
 > [!CAUTION]
 >
-> I AM NOT RESPONSIBLE FOR ANY DAMAGE THIS CODE MAY CAUSE, USE IT AT YOUR OWN
-> RISK.
+> RECUERDA QUE TODA ACCIÓN QUE VAYAS A REALIZAR CORRE BAJO TU PROPIA RESPONSABILIDAD
+> EN ESTA GUÍA SE TE MUESTRA EL PASO A PASO DEL PROCESO PARA CONFIGURAR EL TECLADO, PERO QUIEN ES RESPONSABLE DE REALIZARLO ERES TÚ MISMO.
 
 > [!NOTE]
 >
->
-> FEEL FREE TO MODIFY THE CODE TO YOUR LIKING OR USE WHATEVER YOU NEED. I
-> DECIDED TO REVOKE MANY CHANGES AND RETURN TO THE BASE MAPPING, SO THAT
-> ADVANCED AND NON-ADVANCED  USERS CAN USE THIS REPOSITORY AS A BASE FOR THEIR
-> CONFIGURATIONS. IF YOU HAVE ANY QUESTIONS, DON'T HESITATE TO ASK. IF YOU HAVE
-> ANY SUGGESTIONS, FEEL FREE TO SUGGEST.
+> SIÉNTETE LIBRE DE MODIFICAR EL CÓDIGO A TU GUSTO O USAR LO QUE NECESITES.
+> ESTA ES UN GÍA BAISCA Y DE INICIO PARA QUIENES ESTAN BUSCANDO INICIAR EN LA CONFIGURACIÓN DE [ZMK firmware]
 
+Esta base incluye las configuraciones Corne más recientes, con una configuración para el dongle Corne con/sin pantalla OLED. También puedes usar tu teclado CON/SIN un dongle, por supuesto. con cualquiera de las placas o mamparas que tengas.
 
-The objective of this repository is to serve as a base for configuring your
-Corne keyboard with the firmware [ZMK firmware] in a simple and fast way.
-without having to configure everything from scratch. Many of us are fascinated
-by customizing our keyboards, but sometimes we don't have the time or
-experience to do it. That is why I have decided to create this repository so
-that you can have a base configuration and you can modify it to your liking.
+Probado con **[puchi_ble_v1]** (usado como dongle y como periférico), **[nice_nano_v2]** (usado como dongle y como periférico), **clones of nice_nano_v2** (usado como dongle y como periférico) y **[seeeduino_xiao_ble]** (usado solo como dongle).
+                                                                                 
 
-This base includes the most recent corne configurations, featuring a setup for
-the Corne dongle with/without an OLED screen.
-You can also use your keyboard WITH / WITHOUT a dongle of course. with any of the
-plates or screens you have.
-
-Tested with **[puchi_ble_v1]** (used as a dongle and as
-peripherals), **[nice_nano_v2]** (used as a dongle and as peripherals),
-**clones of nice_nano_v2** (used as a dongle and as peripherals), and the
-**[seeeduino_xiao_ble]** (used only as a dongle).
-
-| Main Pros                                                                                       |
-|-------------------------------------------------------------------------------------------------|
-| mobility and flexibility                                                                        |
-| reduction of tension and fatigue (ergonomic and ortholinear)                                    |
-| improved productivity                                                                           |
-| bluetooth and usb-c connection                                                                  |
-| Highly customizable programmable with [ZMK firmware].                                           |
-| compatibility with linux, windows, macos, android, ios and more                                 |
-| completely wireless between the two halves and with the PC                                      |
-| ultra-low consumption. extends battery life to the limit                                        |
-| drag and drop thanks to the included uf2 bootloader                                             |
-| no additional software required for flashing                                                    |
-| support for multiple devices (up to 5)                                                          |
-| mouse keys                                                                                      |
-| rgb                                                                                             |
-| macros                                                                                          |
-| tap dance                                                                                       |
-| combos                                                                                          |
-| up to 1 week of use without charger (with 100mah)                                               |
-| support [nice-view] screen and oled screen                                                      |
-| online editor for keymap. see               [keymap-editor]                                     |
-| 100% open source                                                                                |
-| support for puchi-ble dongle, nice!nano v2, nice!nano v2 clones, seeeduino xiao ble and more... |
-| support with dongle with display 128x32, 128x64 and 128x128                                     |
-| and more...                                                                                     |
-
-# QUICK START
+# INICIO
 > [!NOTE]
 >
-> 1. With this configuration you can use the corne keyboard practically
-> immediately, you just have to follow the following steps and that's it.
+> 1. Con esta configuración podrás utilizar tu teclado prácticamente
+> inmediatamente, solo debes seguir los siguientes pasos y listo.    
+> 3. Si necesita archivos precompilados, puede descargarlos desde [firmware > carpeta](./firmware)
 >
-> 2. If you need precompiled files you can download them from the [firmware
->    folder](./firmware)
+> 4. Si tienes algún problema sólo tienes que flashear los firmwares de reseteo que
+> [firmware](./firmware) carpeta y listo.
 >
-> 3. If you have any problems, you just have to flash the reset firmwares that
->    are in the [firmware](./firmware) folder and that's it.
->
-> 4. Disable the builds you don't need in the file [build.yaml](./build.yaml),
->    by default they are all activated.
-
 
 ### zmk-studio
-This repository includes the necessary configuration to use zmk-studio without
-the need to configure anything else. You just have to follow the steps below:
-- fork this repository y flash the firmware to the keyboard with the uf2 files (see as below en normal procedure)
-- connect the master (dongle or central) to the PC
-- Modify the keyboard mapping on the go with [ZMK Studio
-  Web](https://zmk.studio/) and enjoy the changes!
+Este repositorio incluye la configuración necesaria para usar zmk-studio sin la necesidad de configurar
+cualquier otra cosa. Sólo tienes que seguir los pasos a continuación:
+- fork este repositorio y flashear el firmware al teclado con los archivos uf2 (ver a continuación el procedimiento normal)
+- conectar el maestro (dongle o central) a la PC
+- Modifique la asignación del teclado sobre la marcha con [ZMK Studio
+  Web](https://zmk.studio/) ¡Y disfruta de los cambios!
 
-### normal procedure
-1. Fork this repository (I appreciate if you follow me on [github] and [youtube])
-2. Modify the keyboard mapping with [keymap-editor]. If you want to read about
-   the features of this editor you can do so here: [ZMK Studio Web](https://zmk.studio/) or [keymap-editor](https://github.com/nickcoutsos/keymap-editor).
-3. Save changes and commit (optional)
-4. Go to actions on github and download the artifacts
+### procedimiento normal
+1. Fork este repositorio
+2. Modificar el mapeo de teclas con [keymap-editor]. Para conocer más sobre el editor ver: [ZMK Studio Web](https://zmk.studio/) o [keymap-editor](https://github.com/nickcoutsos/keymap-editor).
+3. Guardar los cambios y crear un nuevo commit (optional)
+4. Vaya a "Actions" en github y descargue los firmware generados.
    - Actions(click) -> All Workflows (click)-> Initial User Config. (here you
      scroll to the bottom and click)
    - Here is something called artifacts, click to download the file, it is a .zip
