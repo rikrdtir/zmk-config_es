@@ -51,7 +51,6 @@ Probado con **[puchi_ble_v1]** (usado como dongle y como periférico), **[nice_n
 > 1. Con esta configuración podrás utilizar tu teclado prácticamente
 > inmediatamente, solo debes seguir los siguientes pasos y listo.    
 > 3. Si necesita archivos precompilados, puede descargarlos desde [firmware > carpeta](./firmware)
->
 > 4. Si tienes algún problema sólo tienes que flashear los firmwares de reseteo que
 > [firmware](./firmware) carpeta y listo.
 >
@@ -69,14 +68,13 @@ cualquier otra cosa. Sólo tienes que seguir los pasos a continuación:
 2. Modificar el mapeo de teclas con [keymap-editor]. Para conocer más sobre el editor ver: [ZMK Studio Web](https://zmk.studio/) o [keymap-editor](https://github.com/nickcoutsos/keymap-editor).
 3. Guardar los cambios y crear un nuevo commit (optional)
 4. Vaya a "Actions" en github y descargue los firmware generados.
-   - Actions(click) -> All Workflows (click)-> Initial User Config. (here you
-     scroll to the bottom and click)
-   - Here is something called artifacts, click to download the file, it is a .zip
-   - now go to download on your computer (or wherever you have downloads by default):
-   - unzip the .zip file
-   - Connect the nice!nano v2 microcontroller to the USB-C port of your computer
-   - the microcontroller is recognized as a storage device
-5. Flash the firmware to the keyboard with the uf2 files (drag and drop and WITH dongle)
+   - Selecciona "Actions" -> luego "All Workflows" -> finalmente "Initial User Config". (Aquí desplázate hasta la parte inferior y haz clic)
+   - Aquí encontraras los llamados "artifacts", haga clic para descargar el archivo .zip.
+   - Descomprime el archivo .zip.
+   - Conecta el microcontrolador nice!nano v2 (o clones) a tu computadora  con ayuda de un cable USB-C.
+   - El microcontroladors (Nice!Nano) sera reconocido como un dispositivo externo, como si se tratase de una memoria USB.
+   - (En el caso de que no aparesca como un dispositivo externo, debes accionar el boton RESET dos veces de manera continua, esperar a que se muestre).
+5. Ahora ya puedes hacer el Flasheo de cada una de las parte segun corresponda izquierda (left) y derecha (right) (copia y pega cada artifact o arrastra y suelta en cada una de los dispositivos externos que has conectado anteriormente.)
    - xiao_corne_dongle_xiao_dongle_display.uf2 for [seeeduino_xiao_ble] as a dongle
    - nice_corne_left_peripheral.uf2 for [nice_nano_v2] as a peripheral
    - nice_corne_right.uf2 for [nice_nano_v2] as a peripheral
