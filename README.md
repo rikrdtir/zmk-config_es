@@ -74,18 +74,18 @@ cualquier otra cosa. Sólo tienes que seguir los pasos a continuación:
    - Conecta el microcontrolador nice!nano v2 (o clones) a tu computadora  con ayuda de un cable USB-C.
    - El microcontroladors (Nice!Nano) sera reconocido como un dispositivo externo, como si se tratase de una memoria USB.
    - (En el caso de que no aparesca como un dispositivo externo, debes accionar el boton RESET dos veces de manera continua, esperar a que se muestre).
-5. Ahora ya puedes hacer el Flasheo de cada una de las parte segun corresponda izquierda (left) y derecha (right) (copia y pega cada artifact o arrastra y suelta en cada una de los dispositivos externos que has conectado anteriormente.)
-   - xiao_corne_dongle_xiao_dongle_display.uf2 for [seeeduino_xiao_ble] as a dongle
-   - nice_corne_left_peripheral.uf2 for [nice_nano_v2] as a peripheral
-   - nice_corne_right.uf2 for [nice_nano_v2] as a peripheral
-6. Flash the firmware to the keyboard with the uf2 files (drag and drop and WITHOUT dongle)
-   - nice_corne_left.uf2 for [nice_nano_v2] as a master side
-   - nice_corne_right.uf2 for [nice_nano_v2] as a peripheral
-7. If you need help, you can ask in the [ZMK Discord]
-8. Enjoy your new keyboard
+5. Ahora ya puedes hacer el Flasheo (copia y pega cada artifact o arrastra y suelta en cada una de los dispositivos externos que has conectado anteriormente.)
+   - nice_corne_left.uf2 para el [nice_nano_v2] del lado izquierdo como maestro (Master).
+   - nice_corne_right.uf2 para el [nice_nano_v2] del lado derecho (peripheral).
+7. Para Flashear utiliznado dongle (Donglev -> seeeduino_xiao_ble)
+   - xiao_corne_dongle_xiao_dongle_display.uf2 para [seeeduino_xiao_ble] como dongle
+   - nice_corne_left_peripheral.uf2 para el  [nice_nano_v2] lado izquierdo.
+   - nice_corne_right.uf2 para el [nice_nano_v2] lado derecho.
+8. Si tienes dudas puedes hacer tus consultas en [ZMK Discord]
+9. Teclado listo para usar.
 
-Here you can see the visual changes to the configuration:
-> [!NOTE]
+Aquí puedes ver los cambios visuales en la configuración:
+> [!NOTA]
 >
 > This .svg image is automatically generated every time a change is made with
 > the keymap editor. Github's workflows are responsible for building and
